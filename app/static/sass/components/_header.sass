@@ -1,0 +1,148 @@
+@use "../base/variables" as *
+@use "../base/mixins" as *
+@use "../base/animations"
+
+#main-header
+    background-color: transparent
+    z-index: 2
+    transition: all .4s ease-in
+    -webkit-transition: all .4s ease-in
+
+    +tablet
+        background-color: $quinary-color-b
+
+    &.role
+        background-color: $quinary-color-b
+        backdrop-filter: blur(5px)
+        -webkit-backdrop-filter: blur(5px)
+
+    #criptohacking-brand
+        color: $primary-color
+        animation: brand-enter 1.7s cubic-bezier(0.755, 0.050, 0.855, 0.060) both
+        -webkit-animation: brand-enter 1.7s cubic-bezier(0.755, 0.050, 0.855, 0.060) both
+
+        #logo
+            width: 5rem
+            height: 5rem
+
+            +tablet
+                width: 6rem
+                height: 6rem
+
+        #logo-legend
+            font: bold 1.5em $title-font
+            text-shadow: 0px 0px 1px $quinary-color            
+
+            +tablet
+                font-size: 1.8em
+
+    #navbar-controller-btn
+        font-size: 2em
+        background-color: $tertiary-color
+        width: 3rem
+        height: 3rem
+        transition: all .5s ease-in
+        -webkit-transition: all .5s ease-in
+
+        .bar
+            height: 4px
+            width: 100%
+            border-radius: 3px
+            background-color: $primary-color
+
+        &.list-btn
+            #bar-1
+                transform: translateY(-4px)
+                -webkit-transform: translateY(-4px)
+
+            #bar-3
+                transform: translateY(4px)
+                -webkit-transform: translateY(4px)
+
+        &.x-btn
+            #bar-1
+                transform: translateY(4px) rotateZ(-45deg)
+                -webkit-transform: translateY(4px) rotateZ(-45deg)
+
+            #bar-2
+                opacity: 0
+
+            #bar-3
+                transform: translateY(-6px) rotateZ(45deg)
+                -webkit-transform: translateY(-6px) rotateZ(45deg)
+
+    #main-menu
+        transition: all .3s ease-in
+        -webkit-transition: all .3s ease-in
+
+        +tablet
+            position: static !important
+            opacity: 1 !important
+            width: 60% !important
+
+        +desktop
+            width: 70% !important
+
+        +tv
+            width: 60% !important
+
+        &.closed
+            opacity: 0
+
+        &.opened
+            opacity: 1
+
+        #main-navbar
+            position: absolute
+            left: 0%
+            background-color: $secondary-color
+            transition: all .3s ease-in
+            -webkit-transition: all .3s ease-in
+
+            +tablet
+                transform: none !important
+                -webkit-transform: none
+                position: static !important
+                opacity: 1 !important
+                background-color: transparent
+
+            &.closed
+                transform: rotateX(90deg)
+                -webkit-transform: rotateX(90deg)
+                top: 50%
+                opacity: 0
+
+            &.opened
+                transform: rotateX(0deg)
+                -webkit-transform: rotateX(0deg)
+                top: 100%
+                opacity: 1
+
+            a
+                text-decoration: none
+                color: $quartenary-color
+                font: 600 1.1em $description-font
+                &:nth-child(1)
+                    animation: links-enter 1s ease-in both
+                    -webkit-animation: links-enter 1s ease-in both
+
+                &:nth-child(2)
+                    animation: links-enter 1.3s ease-in both
+                    -webkit-animation: links-enter 1.3s ease-in both
+
+                &:nth-child(3)
+                    animation: links-enter 1.6s ease-in both
+                    -webkit-animation: links-enter 1.6s ease-in both
+
+                &:nth-child(4)
+                    animation: links-enter 1.9s ease-in both
+                    -webkit-animation: links-enter 1.9s ease-in both
+
+                &:active,
+                &:focus,
+                &:hover
+                    font-weight: 600
+
+                +tablet
+                    &.link-pattern
+                        font-size: 1.3em                    

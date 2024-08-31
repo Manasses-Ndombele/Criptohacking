@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CriptoHacking - Landing Page</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.ico') }}" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100..900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.min.css') }}">
+    </head>
+    <body>
+        <header id="main-header" class="d-flex align-items-center justify-content-around flex-wrap position-fixed w-100 top-0 start-0 justify-content-md-between px-md-4 px-xl-0 justify-content-xl-around">
+            <a href="#" id="criptohacking-brand" class="d-block text-decoration-none py-2 me-4 m-md-0">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logotipo do site" id="logo">
+                <span id="logo-legend">CriptoHacking</span>
+            </a>
+            <button type="button" id="navbar-controller-btn" class="list-btn border-0 p-0 rounded-circle px-2 d-md-none">
+                <section id="bar-1" class="bar"></section>
+                <section id="bar-2" class="bar"></section>
+                <section id="bar-3" class="bar"></section>
+            </button>
+            <menu id="main-menu" class="closed position-relative m-0 p-0 w-100">
+                <nav id="main-navbar" class="closed w-100 d-flex flex-column p-3 gap-2 text-center position-absolute flex-md-row p-md-0 justify-content-md-between align-items-lg-center">
+                    <a href="#prices-area" target="_self" class="link-pattern">Prices</a>
+                    <a href="#testimonies-area" target="_self" class="link-pattern">Testimonies</a>
+                    <a href="#faq-area" target="_self" class="link-pattern">FAQ</a>
+                    <a href="#support-area" target="_self" class="link-pattern">Support</a>
+                    <a href="{{ url_for('checkout') }}" target="_self" class="btn-link-sys d-md-none d-lg-block scale-btn">Signing platform</a>
+                </nav>
+            </menu>
+        </header>
+        <main>
+            <div id="intro-area">
+                <div id="intro-img-area" class="d-lg-none"></div>
+                <div id="intro-area-body" class="p-3 d-md-flex flex-md-column justify-content-md-center align-items-md-start">
+                    <h1 class="mb-4 tracking-in-expand">Unlock the future of money dominating all about digital currencies!</h1>
+                    <p class="mb-2 text-focus-in">Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                    <p id="price" class="mb-4 text-focus-in">
+                        <span class="d-block">From</span>
+                        <strong>
+                            <span>85,63</span>
+                            <span class="fw-lighter">US$ / mo</span>
+                        </strong>
+                    </p>
+                    <button type="button" class="checkout-btn-link primary px-md-3 scale-btn">Signing platform</button>
+                </div>
+            </div>
+            <div id="features-area" class="p-3 mt-md-5 mt-lg-2 p-xl-0 mx-xl-auto">
+                <div class="feature-container primary d-md-flex justify-content-md-between align-items-md-center my-4 justify-content-lg-around">
+                    <img src="{{ url_for('static', filename='images/factor-bitcoin-2.png') }}" alt="BitCoin 2" class="w-100 feature-img opacity-0">
+                    <div class="feature-body text-center">
+                        <h2 class="mb-3 feature-title opacity-0">What are cryptocurrencies?</h2>
+                        <p class="feature-description opacity-0">Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                    </div>
+                </div>
+                <div class="feature-container secondary d-md-flex flex-row-reverse justify-content-md-between align-items-md-center my-md-4 justify-content-lg-around">
+                    <img src="{{ url_for('static', filename='images/factor-money.png') }}" alt="BitCoin on pocket" class="w-100 feature-img opacity-0">
+                    <div class="feature-body text-center">
+                        <h2 class="mb-3 feature-title opacity-0">How to make money from cryptocurrencies?</h2>
+                        <p class="feature-description opacity-0">Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                    </div>
+                </div>
+                <div class="feature-container primary d-md-flex justify-content-md-between align-items-md-center my-md-4 justify-content-lg-around">
+                    <img src="{{ url_for('static', filename='images/factor-platform.png') }}" alt="CriptoHacker Platform" class="w-100 feature-img opacity-0">
+                    <div class="feature-body text-center">
+                        <h2 class="mb-3 feature-title opacity-0">What you will learn with us?</h2>
+                        <p class="feature-description opacity-0">Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                    </div>
+                </div>
+                <div class="feature-container secondary d-md-flex flex-row-reverse justify-content-md-between align-items-md-center my-md-4 justify-content-lg-around">
+                    <img src="{{ url_for('static', filename='images/factor-growth.png') }}" alt="BitCoin is growing" class="w-100 feature-img opacity-0">
+                    <div class="feature-body text-center">
+                        <h2 class="mb-3 feature-title opacity-0">How much you will earn with cryptocurrencies?</h2>
+                        <p class="feature-description opacity-0">Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="bonus-area" class="p-3 d-md-flex flex-md-wrap justify-content-md-around px-lg-0">
+                <h2 class="title-area opacity-0">Meet the bonuses you will win!</h2>
+                <div id="bonus-container" class="p-3 d-md-flex flex-md-wrap justify-content-md-around px-lg-0">
+                    <div class="bonus px-3 d-flex flex-column align-items-center opacity-0 container-data data-1">
+                        <p class="mb-0 rounded-circle d-flex align-items-center justify-content-center"><i class="bi bi-person-fill"></i></p>
+                        <h3 class="fw-bold text-center">Exclusive community</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                    </div>
+                    <div class="bonus px-3 d-flex flex-column align-items-center opacity-0 container-data data-2">
+                        <p class="mb-0 rounded-circle d-flex align-items-center justify-content-center"><i class="bi bi-cloud-check-fill"></i></p>
+                        <h3 class="fw-bold text-center">Full follow-up</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                    </div>
+                    <div class="bonus px-3 d-flex flex-column align-items-center opacity-0 container-data data-3 mt-md-2">
+                        <p class="mb-0 rounded-circle d-flex align-items-center justify-content-center"><i class="bi bi-mortarboard-fill"></i></p>
+                        <h3 class="fw-bold text-center">Support materials</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="tutors-area">
+                <h2 class="mb-md-5 title-area opacity-0">Get to know some of the platform instructors</h2>
+                <div id="tutors-container" class="py-3 px-4 d-md-flex flex-md-wrap justify-content-md-around align-items-md-center gap-md-3 p-lg-2 align-items-lg-start flex-lg-nowrap justify-content-lg-around py-md-0 px-md-2 justify-content-xl-evenly">
+                    <div class="tutor-profile container-data opacity-0 data-1 mb-5 mb-md-2">
+                        <div class="profile-img-area position-relative">
+                            <img src="{{ url_for('static', filename='images/factor-instructor-1.jpg') }}" alt="Instrutor Geraldo Silvestre" class="w-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319" class="position-absolute start-0">
+                                <path fill="#593b02" fill-opacity="1" d="M0,96L80,96C160,96,320,96,480,106.7C640,117,800,139,960,165.3C1120,192,1280,224,1360,240L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+                            </svg>
+                        </div>
+                        <div class="profile-data p-3">
+                            <h3 class="fw-bold">Geraldo Silvestre</h3>
+                            <p>Cryptocurrency Mining Specialist</p>
+                        </div>
+                    </div>
+                    <div class="tutor-profile container-data opacity-0 data-2 mb-5 mb-md-2">
+                        <div class="profile-img-area position-relative">
+                            <img src="{{ url_for('static', filename='images/factor-instructor-2.jpg') }}" alt="Instrutora Eliane Zua" class="w-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319" class="position-absolute start-0">
+                                <path fill="#593b02" fill-opacity="1" d="M0,96L80,96C160,96,320,96,480,106.7C640,117,800,139,960,165.3C1120,192,1280,224,1360,240L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+                            </svg>
+                        </div>
+                        <div class="profile-data p-3">
+                            <h3 class="fw-bold">Eliane Zua</h3>
+                            <p>Bitcoin Specialist</p>
+                        </div>
+                    </div>
+                    <div class="tutor-profile container-data opacity-0 data-3 mb-5">
+                        <div class="profile-img-area position-relative">
+                            <img src="{{ url_for('static', filename='images/factor-instructor-3.jpg') }}" alt="Instrutor Edmilson Luzito" class="w-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319" class="position-absolute start-0">
+                                <path fill="#593b02" fill-opacity="1" d="M0,96L80,96C160,96,320,96,480,106.7C640,117,800,139,960,165.3C1120,192,1280,224,1360,240L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+                            </svg>
+                        </div>
+                        <div class="profile-data p-3">
+                            <h3 class="fw-bold">Edmilson Luzito</h3>
+                            <p>Blockchain specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="prices-area" class="p-3">
+                <h2 class="mb-4 mb-md-5 title-area opacity-0">Plans of access to the platform</h2>
+                <div id="prices-container" class="px-4 px-md-2 d-md-flex flex-md-wrap justify-content-md-around align-items-md-center gap-md-3 flex-lg-nowrap justify-content-xl-evenly">
+                    <div class="plan-price container-data opacity-0 data-1 d-flex flex-column justify-content-between">
+                        <header class="p-2 text-center">
+                            <h3>Bronze plan</h3>
+                        </header>
+                        <ul class="p-0 m-3">
+                            <li class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-check2-all"></i>
+                                <span>30 days of free test</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-check2-all"></i>
+                                <span>50% discount in the first month</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-check2-all"></i>
+                                <span>Access to member area</span>
+                            </li>
+                        </ul>
+                        <p class="price-info p-3 m-0 text-center">
+                            <strong>85,63</strong>
+                            <span>US$ /mo</span>
+                        </p>
+                        <div class="price-cta-area p-3">
+                            <button type="button" class="checkout-btn-link secondary w-100">Signing</button>
+                        </div>
+                    </div>
+                    <div class="plan-price container-data opacity-0 data-2 d-flex flex-column justify-content-between">
+                        <header class="p-2 text-center">
+                            <h3>Silver plan</h3>
+                        </header>
+                        <ul class="p-0 m-3">
+                            <li class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-check2-all"></i>
+                                <span>60 days of free test</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-check2-all"></i>
+                                <span>80% discount in the first month</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-check2-all"></i>
+                                <span>Access to member area</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-check2-all"></i>
+                                <span>Close friends access</span>
+                            </li>
+                        </ul>
+                        <p class="price-info p-3 m-0 text-center">
+                            <strong>513,78</strong>
+                            <span>US$ /sem</span>
+                        </p>
+                        <div class="price-cta-area p-3">
+                            <button type="button" class="checkout-btn-link secondary w-100">Signing</button>
+                        </div>
+                    </div>
+                    <div class="plan-price container-data opacity-0 data-3 d-flex flex-column justify-content-between">
+                        <header class="p-2 text-center">
+                            <h3>Gold plan</h3>
+                        </header>
+                        <ul class="p-0 m-3 mb-md-1">
+                            <li class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-check2-all"></i>
+                                <span>80 days of free test</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-check2-all"></i>
+                                <span>99% discount in the first month</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-check2-all"></i>
+                                <span>Access to member area</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-check2-all"></i>
+                                <span>Close friends access</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-check2-all"></i>
+                                <span>Participation in hall of reputation</span>
+                            </li>
+                        </ul>
+                        <p class="price-info p-3 m-0 text-center py-md-1">
+                            <strong>992,63</strong>
+                            <span>US$ /year</span>
+                        </p>
+                        <div class="price-cta-area p-3">
+                            <button type="button" class="checkout-btn-link secondary w-100">Signing</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="testimonies-area" class="mb-md-5 d-lg-flex flex-lg-column align-items-lg-center">
+                <h2 class="my-md-4 title-area opacity-0">Our students' testimonials</h2>
+                <div id="carousel-testimonies" class="carousel slide p-3" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel-testimonies" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel-testimonies" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel-testimonies" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner pt-lg-4">
+                        <div class="carousel-item active">
+                            <div class="testimony-container p-3 mx-2 mx-md-auto">
+                                <i class="bi bi-quote"></i>
+                                <p>Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                                <footer class="d-flex align-items-center gap-2 mb-3 gap-md-3">
+                                    <img src="{{ url_for('static', filename='images/client.jpg') }}" alt="Cliente da CriptoHacking">
+                                    <h3 class="mb-0">Maria Teca</h3>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimony-container p-3 mx-2 mx-md-auto">
+                                <i class="bi bi-quote"></i>
+                                <p>Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                                <footer class="d-flex align-items-center gap-2 mb-3 gap-md-3">
+                                    <img src="{{ url_for('static', filename='images/client.jpg') }}" alt="Cliente da CriptoHacking">
+                                    <h3 class="mb-0">Weldon Gomes</h3>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimony-container p-3 mx-2 mx-md-auto">
+                                <i class="bi bi-quote"></i>
+                                <p>Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                                <footer class="d-flex align-items-center gap-2 mb-3 gap-md-3">
+                                    <img src="{{ url_for('static', filename='images/client.jpg') }}" alt="Cliente da CriptoHacking">
+                                    <h3 class="mb-0">Edmar Domingos</h3>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev d-lg-none" type="button" data-bs-target="#carousel-testimonies" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next d-lg-none" type="button" data-bs-target="#carousel-testimonies" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div id="ceo-and-founder-area" class="p-3 d-md-flex justify-content-lg-between mx-xl-auto justify-content-xl-center gap-xl-4">
+                <img src="{{ url_for('static', filename='images/factor-instructor-2.jpg') }}" alt="CEO e Fundadora da CriptoHacking" class="w-100 rounded-4 mb-4 opacity-0" id="ceo-img">
+                <div id="ceo-and-founder-body">
+                    <h2 class="mb-3 title-area opacity-0">Carolina Manuel - The mind from behind everything!</h2>
+                    <p class="text-center founder-bio opacity-0">Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                    <p class="text-center founder-bio opacity-0">Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                </div>
+            </div>
+            <div id="faq-area">
+                <h2 class="my-md-5 title-area opacity-0">F.A.Q - Frequently questions</h2>
+                <div class="accordion px-md-4 mx-lg-auto" id="faq-accordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button d-flex align-items-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">How can I do strange things without looking like a very strange person?</button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faq-accordion">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatibus, ea harum tempore, dignissimos illum autem doloribus quidem suscipit iure nesciunt praesentium voluptatem quisquam maxime vitae enim dolorem, beatae amet?</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nostrum iure itaque atque ab rerum molestiae rem, est quibusdam dolor aliquid assumenda! Laborum doloribus esse facere facilis eum deserunt corrupti.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed d-flex align-items-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What is the simplest way to sign your platform?</button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nulla possimus, omnis ea officia, vero fugit ex placeat numquam fuga saepe consequatur. Distinctio ab explicabo aperiam sapiente corrupti tempora accusantium.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum mollitia dolorem earum sunt vero ex dolore quaerat libero exercitationem sapiente sint esse ullam obcaecati rerum, doloremque expedita vitae alias debitis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed d-flex align-items-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Where I am going to attend classes?</button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, porro placeat ipsum voluptates dolorum voluptate ipsa mollitia accusamus reiciendis unde, illum corporis, dignissimos tempora laudantium aperiam maiores quas itaque beatae!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non repudiandae, odio, perspiciatis dolorem consequuntur assumenda voluptate cum autem provident vel enim officiis dolorum ipsum, itaque a dolores impedit nihil animi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed d-flex align-items-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">You can give me some ideas of questions?</button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, porro placeat ipsum voluptates dolorum voluptate ipsa mollitia accusamus reiciendis unde, illum corporis, dignissimos tempora laudantium aperiam maiores quas itaque beatae!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non repudiandae, odio, perspiciatis dolorem consequuntur assumenda voluptate cum autem provident vel enim officiis dolorum ipsum, itaque a dolores impedit nihil animi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed d-flex align-items-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">This can be considered another question?</button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, porro placeat ipsum voluptates dolorum voluptate ipsa mollitia accusamus reiciendis unde, illum corporis, dignissimos tempora laudantium aperiam maiores quas itaque beatae!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non repudiandae, odio, perspiciatis dolorem consequuntur assumenda voluptate cum autem provident vel enim officiis dolorum ipsum, itaque a dolores impedit nihil animi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="support-area" class="mt-4">
+                <div id="support-area-overlay" class="w-100 h-100 p-3 d-flex flex-column align-items-center justify-content-center">
+                    <h2 class="mb-3 title-area opacity-0">Ask your questions on support!</h2>
+                    <p class="text-center mb-4" id="support-description">Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber. Lorem ipsum dolor sit amet consectetur irum me eliscipicit morouh asta la viesrta bieber.</p>
+                    <button type="button" class="primary opacity-0" id="support-btn">
+                        <i class="bi bi-whatsapp me-lg-2"></i>
+                        <span>Talk to attendant</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+        <footer class="p-3 text-center">
+            <p class="mb-0">Copyright &copy; 2024 - <a href="#">Manassés Ndombele</a></p>
+            <p class="mb-0">Freelancer Developer</p>
+        </footer>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</html>

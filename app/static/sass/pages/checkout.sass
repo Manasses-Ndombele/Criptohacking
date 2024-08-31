@@ -1,0 +1,118 @@
+@use "../base/variables" as *
+@use "../base/mixins" as *
+@use "../base/reset"
+@use "../components/header"
+@use "../components/title"
+@use "../components/button"
+@use "../components/footer"
+
+header
+    background-color: $quinary-color-b
+
+main
+    padding-top: 5.5rem
+    +tablet
+        width: 80%
+
+    +desktop
+        width: 70%
+
+    +tv
+        width: 60%
+
+    #checkout-info
+        +tablet
+            text-align: center
+
+        i
+            color: $secondary-color
+            font-size: 4.5em
+
+        p
+            color: $tertiary-color
+
+            &:first-of-type
+                font: 500 1.3em $title-font
+                +tablet
+                    font-size: 1.5em
+
+                span
+                    +tablet
+                        font-weight: 700
+
+                strong
+                    font-weight: 600
+                    color: $secondary-color
+
+            &:last-child
+                font: italic 600 1.2em $description-font
+                +tablet
+                    font-size: 1.4em
+
+                strong
+                    font-style: normal
+                    font-weight: 600
+
+    #checkout-form
+        .input-area
+            .form-label
+                color: $secondary-color
+                font: 400 1.2em $description-font
+                +tablet
+                    font-size: 1.35em
+
+                +desktop
+                    cursor: pointer
+
+            .input-group
+                border-bottom: 1px solid $quartenary-color
+
+                .input-group-text
+                    border: none
+                    padding: .4rem
+                    font-size: 1.8em
+                    color: $quartenary-color
+                    +tablet
+                        font-size: 2em
+
+                .form-control,
+                .form-select
+                    border: none
+                    padding-left: .4rem
+                    color: $quartenary-color
+                    font-family: $description-font
+                    font-weight: 400
+                    +tablet
+                        font-size: 1.3em
+
+                    &:active,
+                    &:focus
+                        box-shadow: none
+                        border: none
+
+                    &::placeholder
+                        color: $quartenary-color
+                        opacity: .4
+
+                .form-select
+                    option
+                        background-color: $tertiary-color
+                        color: $quartenary-color
+                        border: none
+
+                        &:checked,
+                        &:active,
+                        &:hover,
+                        &:focus
+                            background-color: $tertiary-color-b
+
+        #form-action-area
+            button
+                font-size: 1.3em
+
+    p
+        color: $quartenary-color
+        font-family: $description-font
+        font-weight: 500
+        +tablet
+            font-size: 1.3em

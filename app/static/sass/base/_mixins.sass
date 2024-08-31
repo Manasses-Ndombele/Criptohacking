@@ -1,0 +1,20 @@
+=tablet
+    @media screen and (min-width: 768px)
+        @content
+
+=desktop
+    @media screen and (min-width: 992px)
+        @content
+
+=introbg($img, $attachment: fixed)
+    background: url('../images/#{$img}') no-repeat center bottom $attachment
+    background-size: cover
+
+=tv
+    @media screen and (min-width: 1200px)
+        @content
+
+=scale-degree-animation($duration)
+    animation: bonus-enter $duration ease-in both
+    -webkit-animation: bonus-enter $duration ease-in both
+    opacity: 1 !important

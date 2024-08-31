@@ -1,0 +1,22 @@
+@use "../base/variables" as *
+@use "../base/mixins" as *
+
+footer
+    background-color: $tertiary-color-b
+    font-family: $description-font
+    font-weight: 600
+    color: $quartenary-color
+
+    p
+        +tablet
+            font-size: 1.2em
+
+        a
+            font-style: italic
+            color: $primary-color
+
+            &:active,
+            &:focus,
+            &:hover
+                color: $primary-color
+                text-decoration: none

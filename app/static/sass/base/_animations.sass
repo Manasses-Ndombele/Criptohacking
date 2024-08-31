@@ -1,0 +1,150 @@
+@use "../base/mixins" as *
+
+@keyframes tracking-in-expand
+    0%
+        letter-spacing: -0.5em
+        opacity: 0
+
+    40%
+        opacity: 0.6
+
+    100%
+        opacity: 1
+
+@keyframes text-focus-in
+    from
+        filter: blur(12px)
+        -webkit-filter: blur(12px)
+        opacity: 0
+
+    to
+        filter: blur(0px)
+        -webkit-filter: blur(0px)
+        opacity: 1
+
+@keyframes links-enter
+    0%
+        opacity: .3
+        transform: translate(-12px, -15px)
+        -webkit-transform: translate(-12px, -15px)
+
+    50%
+        opacity: .6
+        transform: translate(-4px, -7px)
+        -webkit-transform: translate(-4px, -7px)
+
+    75%
+        opacity: .8
+        transform: translate(2px, 2px)
+        -webkit-transform: translate(2px, 2px)
+
+    100%
+        opacity: 1
+        transform: none
+        -webkit-transform: none
+
+@keyframes btn-enter
+    0%
+        opacity: .3
+        transform: scale(0.8)
+        -webkit-transform: scale(0.8)
+
+    50%
+        opacity: .5
+        transform: scale(1.02)
+        -webkit-transform: scale(1.02)
+
+    100%
+        opacity: 1
+        transform: scale(1)
+        -webkit-transform: scale(1)
+
+@keyframes brand-enter
+    0%
+        opacity: .5
+        transform: translateX(-30%)
+        -webkit-transform: translateX(-30%)
+
+    50%
+        opacity: .8
+        transform: translateX(-20%)
+        -webkit-transform: translateX(-20%)
+
+    100%
+        opacity: 1
+        transform: none
+        -webkit-transform: none
+
+@keyframes factor-img-enter
+    0%
+        transform: translate(-50px -50px) scale(0.7)
+        -webkit-transform: translate(-50px -50px) scale(0.7)
+        opacity: .3 !important
+
+    50%
+        transform: translate(-25px -25px) scale(1.08)
+        -webkit-transform: translate(-25px, -25px) scale(1.08)
+        opacity: .7 !important
+
+    100%
+        transform: translate(3px, 3px) scale(1.01)
+        -webkit-transform: translate(3px, 3px) scale(1.01)
+        opacity: .9 !important
+
+@keyframes bonus-enter
+    0%
+        transform: scale(0.7)
+        -webkit-transform: scale(0.7)
+        opacity: .5 !important
+
+    50%
+        transform: scale(1.06)
+        -webkit-transform: scale(1.06)
+        opacity: .7 !important
+
+    100%
+        transform: scale(1)
+        -webkit-transform: scale(1)
+        opacity: 1 !important
+
+@keyframes scale-up-ver-center
+    0%
+        transform: scaleY(0.4)
+
+    100%
+        transform: scaleY(1)
+
+.factor-img-enter
+    animation: factor-img-enter 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+    -webkit-animation: factor-img-enter 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+    transform: none
+    -webkit-transform: none
+    opacity: 1 !important
+
+.tracking-in-expand
+    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+    -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+    opacity: 1 !important
+
+.text-focus-in
+    animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    opacity: 1 !important
+
+.scale-degree-a
+    +scale-degree-animation(1.5s)
+
+.scale-degree-b
+    +scale-degree-animation(2.5s)
+
+.scale-degree-c
+    +scale-degree-animation(3.5s)
+
+.scale-up-ver-center
+    animation: scale-up-ver-center 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    opacity: 1 !important
+
+.scale-btn
+    animation: btn-enter 1s ease-in-out both
+    -webkit-animation: btn-enter 1s ease-in-out both
+    opacity: 1 !important

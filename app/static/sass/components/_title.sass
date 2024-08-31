@@ -1,0 +1,13 @@
+@use "../base/variables" as *
+@use "../base/mixins" as *
+
+h1,
+h2
+    font-weight: bold
+    font-family: $title-font
+    color: $primary-color
+    text-transform: capitalize
+    text-align: center
+
+    +tablet
+        font-size: 2em

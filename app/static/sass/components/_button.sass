@@ -1,0 +1,72 @@
+@use "../base/variables" as *
+@use "../base/mixins" as *
+
+button
+    border: none
+    color: $quartenary-color
+    font: 600 1.2em $description-font
+    padding: 0.8rem 1rem
+    transition: all .4s ease-in-out
+
+    &.primary
+        background-color: $secondary-color
+        border-right: 5px ridge $primary-color
+        border-bottom: 5px ridge $primary-color
+
+        &:active,
+        &:focus
+            border: 5px groove $primary-color
+            box-shadow: 10px 10px 2px $secondary-color
+
+        +desktop
+            &:hover
+                color: $primary-color
+                background-color: transparent
+                border: 5px groove $primary-color
+                box-shadow: 10px 10px 2px $secondary-color
+
+    &.secondary
+        background-color: $primary-color
+        border-right: 5px ridge $tertiary-color
+        border-bottom: 5px ridge $tertiary-color
+
+        &:active,
+        &:focus
+            border: 8px groove $primary-color
+            box-shadow: 10px 10px 2px $tertiary-color
+
+        +desktop
+            &:hover
+                color: $tertiary-color
+                background-color: transparent
+                border: 8px groove $primary-color
+                box-shadow: 10px 10px 2px $tertiary-color
+
+    &:active,
+    &:focus
+        text-shadow: 0px 0px 3px $quartenary-color
+        background-color: transparent
+        transform: scale(1.02)
+
+a
+    &.btn-link-sys
+        +desktop
+            color: $quartenary-color
+            font: 600 1em $description-font !important
+            padding: .6rem .8rem
+            background-color: $primary-color
+            border-right: 3px ridge $tertiary-color
+            border-bottom: 3px ridge $tertiary-color
+            white-space: nowrap
+            transition: all .4s ease-in-out
+
+            &:active,
+            &:focus
+                border: 5px groove $primary-color
+                box-shadow: 7px 7px 2px $tertiary-color
+
+            &:hover
+                color: $tertiary-color
+                background-color: transparent
+                border: 5px groove $primary-color
+                box-shadow: 7px 7px 2px $tertiary-color

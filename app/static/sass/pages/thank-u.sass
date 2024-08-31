@@ -1,0 +1,29 @@
+@use "../base/variables" as *
+@use "../base/mixins" as *
+@use "../base/reset"
+@use '../base/animations'
+@use "../components/title"
+@use "../components/button"
+@use "../components/footer"
+
+main
+    height: 90vh
+    +tablet
+        height: 92vh
+
+    h1
+        font-weight: 500
+
+    p
+        color: $quartenary-color
+        font: 400 1.2em $description-font
+        +tablet
+            font-size: 1.4em
+            width: 80%
+
+        +desktop
+            width: 60%
+
+    button
+        +tablet
+            font-size: 1.3em

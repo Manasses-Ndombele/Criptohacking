@@ -1,0 +1,449 @@
+@use "../base/variables" as *
+@use "../base/mixins" as *
+@use "../base/reset"
+@use "../base/animations"
+@use "../components/header"
+@use "../components/title"
+@use "../components/button"
+@use "../components/footer"
+
+main
+    #intro-area
+        +tablet
+            position: relative
+            height: 85vh
+
+        +desktop
+            +introbg('factor-blockchain.jpg')
+            height: 90vh
+
+        #intro-img-area
+            height: 40vh
+            +introbg('factor-blockchain.jpg', scroll)
+            +tablet
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                z-index: 0
+                filter: brightness(.5)
+
+        #intro-area-body
+            +tablet
+                position: relative
+                z-index: 1
+                height: 100%
+
+            h1
+                color: $quartenary-color
+                line-height: 30px
+                text-align: left
+                +tablet
+                    width: 90%
+
+                +desktop
+                    color: $primary-color
+                    width: 60%
+                    text-shadow: 0px 0px 1px $quinary-color
+
+                +tv
+                    width: 50%
+
+            p
+                font-family: $description-font
+                font-weight: 400
+
+                &:first-of-type
+                    color: $tertiary-color
+                    line-height: 20px
+                    +tablet
+                        width: 80%
+                        font-size: 1.3em
+                        color: $quartenary-color
+
+                    +desktop
+                        color: $tertiary-color
+                        width: 50%
+
+                    +tv
+                        width: 40%
+
+                &#price
+                    font-size: 1.2em
+                    color: $secondary-color
+                    +tablet
+                        color: $primary-color
+                        font-size: 1.4em
+
+                    strong
+                        span
+                            &:first-child
+                                font-size: 1.3em
+                                color: $primary-color                               
+
+            button
+                +tablet
+                    font-size: 1.3em
+
+    #features-area
+        +tv
+            width: 80%
+        
+        .feature-container
+            +tablet
+                img
+                    width: 20rem !important
+
+                .feature-body
+                    +desktop
+                        width: 50%
+
+                    p
+                        font-size: 1.2em
+
+                &.primary
+                    .feature-body
+                        text-align: end !important
+
+                        h2
+                            text-align: end
+
+                &.secondary
+                    .feature-body
+                        text-align: left !important
+
+                        h2
+                            text-align: left
+
+            p
+                font-family: $description-font
+                font-weight: 700
+                color: $quartenary-color
+
+    #bonus-area
+        #bonus-container
+            +desktop
+                width: 100%
+                display: grid !important
+                grid-template-columns: auto auto auto !important
+
+            +tv
+                width: 90%
+
+            .bonus
+                background-color: $tertiary-color
+                height: 20rem
+                border-radius: 15px
+                margin: 4.5rem 0rem
+                +tablet
+                    width: 20rem !important
+                    height: 24rem
+
+                +desktop
+                    width: 18rem !important
+                    height: 25rem
+                    margin-bottom: 2rem
+
+                +tv
+                    width: 20rem
+
+                &:last-child
+                    +desktop
+                        margin-top: 4.5rem !important
+
+                p
+                    color: $quartenary-color
+
+                    &:first-child
+                        background-color: $primary-color
+                        width: 4rem
+                        height: 4rem
+                        font-size: 2.4em
+                        transform: translateY(-2rem)
+
+                    &:last-child
+                        text-align: center
+                        font-family: $description-font
+                        font-weight: 700
+                        +tablet
+                            font-size: 1.2em
+
+                h3
+                    font-family: $title-font
+                    color: $quartenary-color
+                    +tablet
+                        font-size: 1.8em
+
+    #tutors-area
+        #tutors-container
+            .tutor-profile
+                border-radius: 20px
+                overflow: hidden
+                background-color: $tertiary-color
+                +tablet
+                    width: 22rem
+
+                +desktop
+                    width: 20rem
+                    height: 32rem
+
+                +tv
+                    width: 23rem
+
+                .profile-img-area
+                    +desktop
+                        height: 70%
+
+                    img
+                        height: 20rem
+                        +tablet
+                            height: 25rem
+
+                    svg
+                        bottom: -5px
+
+                .profile-data
+                    background-color: $tertiary-color
+                    +desktop
+                        position: relative
+
+                    h3
+                        color: $primary-color
+                        font-family: $description-font
+                        font-weight: 700
+                        +tablet
+                            font-size: 1.7em
+
+                    p
+                        font-family: $description-font
+                        font-weight: 500
+                        color: $quartenary-color
+                        font-size: 1.1em
+                        +tablet
+                            font-size: 1.2em
+
+    #prices-area
+        #prices-container
+            +tv
+                margin: 5rem 0rem
+
+            .plan-price
+                background-color: $secondary-color
+                border-radius: 15px
+                overflow: hidden
+                height: 32rem
+                margin-bottom: 2rem
+                +tablet
+                    width: 20rem
+                    height: 35rem
+
+                +tv
+                    &:nth-child(2)
+                        transform: scale(1.1)
+
+                header
+                    background-color: $tertiary-color
+                    color: $quartenary-color
+                    font-family: $description-font
+                    font-weight: 700
+
+                    h3
+                        text-shadow: 0px 0px 3px $quartenary-color
+
+                ul
+                    list-style-type: none
+
+                    li
+                        +tablet
+                            font-size: 1.2em
+
+                        i
+                            font-size: 1.5em
+                            color: $tertiary-color
+
+                        span
+                            color: $quartenary-color
+                            font-family: $description-font
+                            font-weight: 400
+
+                .price-info
+                    font: 700 1.3em $description-font
+                    color: $quartenary-color
+
+                    strong
+                        font-size: 1.4em
+
+                .price-cta-area
+                    button
+                        +tablet
+                            font-size: 1.3em
+
+    #testimonies-area
+        #carousel-testimonies
+            +desktop
+                width: 100%
+                height: 25rem
+                background-image: linear-gradient(45deg, $secondary-color, $quinary-color-b)
+
+            .carousel-indicators
+                z-index: 1
+
+            .carousel-inner
+                +desktop
+                    height: 100%
+
+                .carousel-item
+                    .testimony-container
+                        background-color: $tertiary-color
+                        border-radius: 15px
+                        overflow: hidden
+                        +tablet
+                            width: 90%
+
+                        +desktop
+                            width: 30rem
+                            height: 18rem
+                            box-shadow: 0px 0px 10px $quinary-color-b
+
+                        i
+                            font-size: 2.2em
+                            color: $secondary-color
+
+                        p
+                            color: $quartenary-color
+                            font: 600 1em $description-font
+                            +tablet
+                                font-size: 1.2em
+
+                        footer
+                            img
+                                width: 2.8rem
+                                height: 2.8rem
+                                border-radius: 50%
+                                border: 2px solid $primary-color
+                                +tablet
+                                    width: 3rem
+                                    height: 3rem
+
+                            h3
+                                color: $quartenary-color
+                                font: italic 600 1.1em $description-font
+                                +tablet
+                                    font-size: 1.3em
+
+            .carousel-control-prev,
+            .carousel-control-next
+                z-index: 0
+
+    #ceo-and-founder-area
+        +tv
+            width: 80%
+
+        img
+            height: 25rem
+            +tablet
+                width: 50% !important
+                height: 30rem
+
+            +desktop
+                width: 30rem !important
+
+        #ceo-and-founder-body
+            +desktop
+                width: 35rem
+
+            h2
+                +tablet
+                    text-align: end
+
+                +tv
+                    text-align: left
+
+            p
+                font-family: $description-font
+                font-weight: 400
+                color: $quartenary-color
+                +tablet
+                    font-size: 1.2em
+                    text-align: end !important
+
+                +tv
+                    text-align: left !important
+
+    #faq-area
+        #faq-accordion
+            --bs-accordion-border-color: #0d0d0d
+            position: relative
+            z-index: 0
+            +desktop
+                width: 80%
+
+            .accordion-item
+                background-color: #0d0d0d
+                border: none
+
+                .accordion-header
+                    .accordion-button
+                        color: $quartenary-color
+                        background-color: $quinary-color
+                        border: none !important
+                        font-weight: 500
+                        font-size: .6em
+                        line-height: 18px
+                        +tablet
+                            font-size: .7em
+
+                        &::after
+                            background-image: none
+                            content: '\F63B'
+                            color: $secondary-color
+                            font-size: 1.8em
+                            font-family: bootstrap-icons
+                            transform: none
+
+                        &.collapsed
+                            &::after
+                                content: '\F64D'
+                                transform: translateY(-3px)
+
+                        &:active,
+                        &:focus
+                            box-shadow: none
+                            text-shadow: none
+
+                .accordion-collapse
+                    .accordion-body
+                        color: $tertiary-color
+                        font-family: $description-font
+                        font-weight: 600
+
+                        p
+                            +tablet
+                                font-size: 1.2em
+
+    #support-area
+        height: 30rem
+        +introbg('factor-bitcoin.jpg')
+
+        #support-area-overlay
+            background-color: $quinary-color-b
+
+            h2
+                color: $quartenary-color
+                text-shadow: 0px 0px 2px $quinary-color
+
+            p
+                color: $quartenary-color
+                text-shadow: 0px 0px 3px $quinary-color
+                font-size: 1.2em
+                +tablet
+                    font-size: 1.4em
+                    width: 80%
+
+                +desktop
+                    width: 60%
+
+            button
+                +tablet
+                    font-size: 1.3em

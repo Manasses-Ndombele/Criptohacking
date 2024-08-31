@@ -1,0 +1,20 @@
+@use "variables" as *
+
+body
+    background-color: $quinary-color
+
+::selection
+    background-color: $tertiary-color-b
+
+::-webkit-scrollbar
+    width: .6rem
+
+::-webkit-scrollbar-track
+    background-color: $tertiary-color-b
+
+::-webkit-scrollbar-thumb
+    background-color: $secondary-color
+    border-radius: 10px
+
+    &:hover
+        background-color: $primary-color
