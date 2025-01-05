@@ -8,7 +8,9 @@ Link do site: [CriptoHacking](https://www.criptohackingproject.com/)
 
 ### Home do site:
 
-[GIF DA HOMEPAGE DO SITE]
+![Home](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMG8wbDR1OXZ0OGt6OWt0aTR4dnQ0dmxwejJjbXJsbGM0M2J6MmR1eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wIZQw1UF0Vmtd5KOWC/giphy.gif)
+![Checkout](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzdicmprOW56dGwxb3lhb3IwM2N1dGdncDV5ODlkb3JmcTk2NjdoZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CIpNme4hlfsxszFW94/giphy.gif)
+![Thanks Page](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanUwMmFzZ3VvOW53eWJwbGgzMGU0bDZvc2lnczN3c3V4Y2RqNnR3eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/B8a1k1Cs33HjyAVJiJ/giphy.gif)
 
 ### Tecnologias utilizadas
 
