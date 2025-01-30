@@ -4,7 +4,7 @@
 
 **CriptoHacking** é um projeto criado com o objetivo de demonstrar apenas minhas capacidades no lado do frontend no desenvolvimento fullstack, é um projeto que simula uma landing page que está vendendo o acesso a uma plataforma de educação no nicho de criptomoedas por uma assinatura mensal.
 
-Link do site: [CriptoHacking](https://www.criptohackingproject.com/)
+Link do site: [CriptoHacking](https://criptohacking-1trk.onrender.com/)
 
 ### Home do site:
 
